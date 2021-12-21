@@ -10,7 +10,13 @@ import { pageAnimation } from "../animation";
 
 const OurWork = () => {
   return (
-    <Work variants={pageAnimation} animate="show" initial="hidden" exit="exit">
+    <Work
+      variants={pageAnimation}
+      animate="show"
+      initial="hidden"
+      exit="exit"
+      style={{ background: "#FFF" }}
+    >
       <Movie>
         <h2>Sportler</h2>
         <div className="line"></div>
