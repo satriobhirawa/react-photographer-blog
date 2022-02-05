@@ -6,10 +6,15 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 import styled from "styled-components";
 import { About, Description, Image } from "../styles";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion/dist/framer-motion";
+import { useScroll } from "./useScroll";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <Services>
+    <Services ref={element}>
       <Description>
         <h2>
           High <span>Quality</span> Services
